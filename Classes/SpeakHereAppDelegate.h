@@ -48,16 +48,11 @@ Copyright (C) 2012 Apple Inc. All Rights Reserved.
 */
 
 #import <UIKit/UIKit.h>
-
 @class SpeakHereViewController;
-
-@interface SpeakHereAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    SpeakHereViewController *viewController;
-}
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet SpeakHereViewController *viewController;
-
+@interface SpeakHereAppDelegate : UIResponder <UIApplicationDelegate>
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SpeakHereViewController *rootViewController;
+@property (strong, nonatomic) UINavigationController *navgationController;
 @end
+
 
